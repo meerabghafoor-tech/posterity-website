@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posterity - The Future</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const sections = document.querySelectorAll(
+        ".about, .services, .process, .testimonials, .faq, .contact"
+    );
+
+    sections.forEach(section => {
+        section.querySelectorAll(
+            "h1, h2, h3, p, img, .process-card, .service-card, button, a"
+        ).forEach(element => {
+            element.classList.add("animate");
+        });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll(".animate").forEach(element => {
+        observer.observe(element);
+    });
+
+});
+</script>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <h2>Posterity</h2>
+            <p>This is the future</p>
+        </div>
+
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services⌄</a>
+            <a href="#team">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <span>⌕</span>
+            <a href="tel:+800100900">+800 100 900</a>
+            <span>f</span>
+            <span>in</span>
+            <span>♥</span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-text">
+        <p class="hero-subtitle">WELCOME TO POSTERITY</p>
+
+        <h1>
+            The Future
+            <span>Starts Here.</span>
+        </h1>
+
+        <p class="hero-description">
+            We turn creative ideas into extraordinary digital experiences.
+        </p>
+
+        <a href="#services" class="hero-btn">
+            Explore Our Work ↗
+        </a>
+    </div>
+
+    <div class="hero-bottom">
+        <span>CREATIVITY MEETS TECHNOLOGY</span>
+        <span>01 — 04</span>
+    </div>
+
+</section>
+```
+
+    <!-- Why Choose Us -->
+    <section class="why section">
+        <div class="why-image">
+            <img src="../images/why-choose-us.png" alt="Why choose us">
+        </div>
+
+        <div class="why-text">
+            <p class="small-heading">WHY CHOOSE US?</p>
+            <h2>We're the posterity<br>we make future!</h2>
+
+            <p>
+                We create beautiful designs and professional
+                websites to help businesses grow.
+            </p>
+
+            <div class="features">
+                <div>
+                    <h3>Crafted Design</h3>
+                    <p>Creative designs for your website.</p>
+                </div>
+
+                <div>
+                    <h3>Professional</h3>
+                    <p>Professional work and quality.</p>
+                </div>
+
+                <div>
+                    <h3>Easy Customize</h3>
+                    <p>Easy to change and customize.</p>
+                </div>
+
+                <div>
+                    <h3>Responsive</h3>
+                    <p>Works on different screen sizes.</p>
+                </div>
+            </div>
+
+            <a href="#services" class="button">Read More</a>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="services section" id="services">
+        <div class="services-text">
+            <p class="small-heading">WHAT WE OFFER</p>
+            <h2>Our Services</h2>
+
+            <p>
+                We provide creative solutions for your business,
+                including design, marketing and website development.
+            </p>
+
+            <a href="#contact" class="button">View All</a>
+        </div>
+
+        <div class="service-cards">
+            <div class="service-card blue">
+                <img src="../images/branding-design.png" alt="branding design">
+                <h3>Branding Design</h3>
+            </div>
+
+            <div class="service-card green">
+                <img src="../images/website-design.png" alt="website design">
+                <h3>Web Design</h3>
+            </div>
+
+            <div class="service-card green">
+                <img src="../images/photography.png" alt="Photography">
+                <h3>Photography</h3>
+            </div>
+
+            <div class="service-card blue">
+                <img src="../images/retail-shop.png" alt="retail shop">
+                <h3>Retail Shop</h3>
+            </div>
+
+            <div class="service-card blue">
+                <img src="../images/marketing.png" alt="marketing">
+                <h3>Marketing</h3>
+            </div>
+
+            <div class="service-card green">
+                <img src="../images/development.png" alt="development">
+                <h3>Development</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about section" id="about">
+        <div class="about-image">
+            <img src="../images/why-you-need.png" alt="why you need">
+        </div>
+
+        <div class="about-text">
+            <p class="small-heading">ABOUT US</p>
+            <h2>Why you need the<br>posterity?</h2>
+
+            <p>
+                We help businesses build a strong online presence
+                with creative design and website solutions.
+            </p>
+
+            <p>
+                Our aim is to provide professional and easy-to-use
+                websites for different business needs.
+            </p>
+
+            <a href="#contact" class="button">Read More</a>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <img src="../images/coffee-cup.png" alt="coffee cup">
+                <h3>999+</h3>
+                <p>Coffee Cups</p>
+            </div>
+
+            <div class="stat">
+                <img src="../images/completed-projects.png" alt="complete projects">
+                <h3>199+</h3>
+                <p>Completed Projects</p>
+            </div>
+
+            <div class="stat">
+                <img src="../images/working-days.png" alt="working day">
+                <h3>365</h3>
+                <p>Working Days</p>
+            </div>
+
+            <div class="stat">
+                <img src="../images/clients.png" alt="clients">
+                <h3>99+</h3>
+                <p>Clients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="testimonial-image"></div>
+     <img src="../images/testimonial.jpeg" alt="Customer testimonial">
+        <div class="testimonial-text">
+            <p class="small-heading">TESTIMONIALS</p>
+            <h2>What our Clients say<br>About us</h2>
+
+            <p>
+                We always try to provide quality work and
+                the best experience for our clients.
+            </p>
+
+            <div class="client">
+                <img src="../images/happy-customer.png" alt="happy customer">
+                <div>
+                    <h3>Jonathan Doe</h3>
+                    <p>Happy Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process section">
+        <div class="section-title">
+            <p class="small-heading">PROCESS</p>
+            <h2>We Made For You<br>With Love</h2>
+        </div>
+
+
+    <div class="process-cards">
+            <div class="process-card">
+                <img src="../images/select-a-project (1).png" alt="select-a-project">
+                <h3>Select A Project</h3>
+                <p>
+                    First, we understand your project and
+                    discuss your requirements.
+                </p>
+            </div>
+
+
+
+            <div class="process-card">
+                <img src="../images/project-analysis (1).png" alt="project-analysis">
+                <h3>Project Analysis</h3>
+                <p>
+                    We plan the project and decide
+                    how the work will be completed.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <img src="../images/deliver-result (1).png" alt="deliver-result">
+                <h3>Deliver Result</h3>
+                <p>
+                    We complete the work and deliver
+                    the final result to you.
+                </p>
+            </div>
+        </div>
+
+        <p class="faint-word">Process</p>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq section">
+        <div class="faq-text">
+            <p class="small-heading">FAQS</p>
+            <h2>You have to know before<br>start everything</h2>
+
+            <details open>
+                <summary>Nullam lorem risus, egestas?</summary>
+                <p>
+                    We discuss your needs and requirements
+                    before starting the project.
+                </p>
+            </details>
+
+            <details>
+                <summary>Magna fermentum scelerisque?</summary>
+                <p>
+                    Our process starts with planning and analysis.
+                </p>
+            </details>
+
+            <details>
+                <summary>Donec faucibus fermentum lectus?</summary>
+                <p>
+                    We work carefully to complete each project.
+                </p>
+            </details>
+
+            <details>
+                <summary>Ornare nec turpis at consectetur?</summary>
+                <p>
+                    Contact us if you need more information.
+                </p>
+            </details>
+        </div>
+
+        <div class="faq-image">
+            <img src="../images/faq-person (1).png" alt="Frequently asked questions">
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="contact section" id="contact">
+        <div class="contact-text">
+            <p class="small-heading">CONTACT US</p>
+            <h2>Get a free consultation<br>right now</h2>
+
+            <p>
+                Have a project in mind? Get in touch with us
+                to discuss your requirements.
+            </p>
+
+    <form action="contact.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+        </div>
+
+            
+        </div>
+
+    </section>
+
+    <!-- Our Team -->
+    <section class="team section" id="team">
+        <div class="section-title">
+            <p class="small-heading">OUR TEAM</p>
+            <h2>Meet Our Experts</h2>
+        </div>
+
+        <div class="team-cards">
+            <div class="team-card">
+                <img src="../images/jonathan-doe.png" alt="Jonathan Doe">
+                <h3>Jonathan Doe</h3>
+                <p>CEO ; Founder</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/elena-doe.png" alt="Elena Doe">
+                <h3>Elena Doe</h3>
+                <p>Designer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/peter-doe.png" alt="Peter Doe">
+                <h3>Peter Doe</h3>
+                <p>Skilled Developer</p>
+            </div>
+
+            <div class="team-card">
+                <img src="../images/mary-scot.png" alt="Mary Scot</">
+                <h3>Mary Scot</h3>
+                <p>Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>
+                We provide creative design and website
+                solutions for businesses.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Services</h3>
+            <a href="#services">Branding Design</a>
+            <a href="#services">Web Design</a>
+            <a href="#services">Photography</a>
+            <a href="#services">Development</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#team">Our Team</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <p>Street 238,52 tempor</p>
+            <p>Phone: +800 100 900</p>
+            <p>Email: info@example.com</p>
+            <p>Website: demo.com</p>
+        </div>
+
+        <div class="copyright">
+            <p>Posterity WordPress Theme | By Posterity Theme</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
